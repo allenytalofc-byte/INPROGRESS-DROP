@@ -1,0 +1,25 @@
+{
+  "name": "dropshipping-workers",
+  "version": "1.0.0",
+  "description": "Background workers for dropshipping platform",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:dev": "nodemon src/index.js",
+    "import:csv": "node src/import-csv.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "pg": "^8.11.3",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.2",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "keywords": ["dropshipping", "workers", "csv", "import"],
+  "author": "Dropshipping Team",
+  "license": "MIT"
+}

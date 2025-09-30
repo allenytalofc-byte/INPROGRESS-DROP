@@ -1,0 +1,86 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: dropshipping-postgres
+    environment:
+      POSTGRES_DB: dropshipping_db
+      POSTGRES_USER: dropshipping_user
+      POSTGRES_PASSWORD: dropshipping_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./infra/migrations:/docker-entrypoint-initdb.d
+    networks:
+      - dropshipping-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: dropshipping-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - dropshipping-network
+
+  api:
+    build:
+      context: ./services/api
+      dockerfile: Dockerfile
+    container_name: dropshipping-api
+    environment:
+      - NODE_ENV=development
+      - DATABASE_HOST=postgres
+      - DATABASE_PORT=5432
+      - DATABASE_NAME=dropshipping_db
+      - DATABASE_USER=dropshipping_user
+      - DATABASE_PASSWORD=dropshipping_password
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+      - JWT_EXPIRES_IN=7d
+      - API_PORT=3002
+      - CORS_ORIGIN=http://localhost:3000,http://localhost:3001
+    ports:
+      - "3002:3002"
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./services/api:/app
+      - /app/node_modules
+    networks:
+      - dropshipping-network
+    command: npm run start:dev
+
+  workers:
+    build:
+      context: ./services/workers
+      dockerfile: Dockerfile
+    container_name: dropshipping-workers
+    environment:
+      - NODE_ENV=development
+      - DATABASE_HOST=postgres
+      - DATABASE_PORT=5432
+      - DATABASE_NAME=dropshipping_db
+      - DATABASE_USER=dropshipping_user
+      - DATABASE_PASSWORD=dropshipping_password
+    depends_on:
+      - postgres
+    volumes:
+      - ./services/workers:/app
+      - /app/node_modules
+    networks:
+      - dropshipping-network
+    command: npm run start:dev
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  dropshipping-network:
+    driver: bridge
