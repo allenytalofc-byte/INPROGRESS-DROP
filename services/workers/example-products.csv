@@ -1,0 +1,6 @@
+name,description,price,compare_at_price,cost,sku,barcode,stock_quantity,category,tags,image_url
+"Wireless Mouse","Ergonomic wireless mouse with USB receiver",29.99,39.99,12.00,MOUSE-001,1234567890123,100,Accessories,"mouse,wireless,computer",https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800
+"Laptop Stand","Adjustable aluminum laptop stand",59.99,79.99,25.00,STAND-001,1234567890124,50,Accessories,"laptop,stand,ergonomic",https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800
+"Phone Case","Premium silicone phone case - iPhone compatible",19.99,29.99,8.00,CASE-001,1234567890125,200,Accessories,"phone,case,protection",https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800
+"Webcam HD","1080p HD webcam with built-in microphone",89.99,129.99,40.00,CAM-001,1234567890126,75,Electronics,"webcam,camera,video",https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800
+"USB Hub","7-port USB 3.0 hub with power adapter",34.99,49.99,15.00,HUB-001,1234567890127,120,Electronics,"usb,hub,computer",https://images.unsplash.com/photo-1625948515291-69613efd103f?w=800

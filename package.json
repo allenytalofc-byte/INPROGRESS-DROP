@@ -1,0 +1,29 @@
+{
+  "name": "dropshipping-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Complete dropshipping platform with store, admin panel, and backend API",
+  "workspaces": [
+    "apps/*",
+    "services/*"
+  ],
+  "scripts": {
+    "dev:store": "npm run dev --workspace=apps/store-frontend",
+    "dev:admin": "npm run dev --workspace=apps/admin-panel",
+    "dev:api": "npm run dev --workspace=services/api",
+    "build:store": "npm run build --workspace=apps/store-frontend",
+    "build:admin": "npm run build --workspace=apps/admin-panel",
+    "build:api": "npm run build --workspace=services/api",
+    "seed": "npm run seed --workspace=services/api",
+    "import-csv": "node services/workers/import-csv.js"
+  },
+  "keywords": [
+    "dropshipping",
+    "ecommerce",
+    "nextjs",
+    "nestjs",
+    "monorepo"
+  ],
+  "author": "",
+  "license": "MIT"
+}
