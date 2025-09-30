@@ -1,0 +1,14 @@
+{
+  "name": "workers",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node import-csv.js"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.6",
+    "pg": "^8.13.1"
+  }
+}
