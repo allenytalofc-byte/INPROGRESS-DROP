@@ -1,0 +1,11 @@
+name,description,price,cost_price,sku,category,brand,weight,dimensions,images,stock_quantity,min_stock_level,is_active
+Wireless Bluetooth Headphones,High-quality wireless headphones with noise cancellation,99.99,60.00,WBH001,Electronics,TechBrand,0.3,20x15x8 cm,"https://via.placeholder.com/300x300?text=Headphones",100,10,true
+Cotton T-Shirt,Comfortable 100% cotton t-shirt,19.99,12.00,CTS001,Clothing,FashionBrand,0.2,S M L XL,"https://via.placeholder.com/300x300?text=T-Shirt",200,20,true
+Garden Tool Set,Complete set of gardening tools,49.99,30.00,GTS001,Home & Garden,GardenPro,2.5,50x30x15 cm,"https://via.placeholder.com/300x300?text=Garden+Tools",50,5,true
+Smart Watch,Advanced fitness tracking smartwatch,199.99,120.00,SW001,Electronics,TechBrand,0.1,40x40x10 mm,"https://via.placeholder.com/300x300?text=Smart+Watch",75,15,true
+Running Shoes,Comfortable running shoes for all terrains,89.99,55.00,RS001,Sports & Outdoors,SportBrand,0.8,Size 6-12,"https://via.placeholder.com/300x300?text=Running+Shoes",150,25,true
+Coffee Maker,Automatic drip coffee maker,79.99,45.00,CM001,Home & Garden,KitchenPro,2.0,25x20x30 cm,"https://via.placeholder.com/300x300?text=Coffee+Maker",30,5,true
+Backpack,Waterproof hiking backpack,69.99,40.00,BP001,Sports & Outdoors,OutdoorGear,1.2,50x30x20 cm,"https://via.placeholder.com/300x300?text=Backpack",80,10,true
+Bluetooth Speaker,Portable wireless speaker,59.99,35.00,BS001,Electronics,SoundTech,0.5,15x10x8 cm,"https://via.placeholder.com/300x300?text=Speaker",120,20,true
+Yoga Mat,Non-slip yoga mat for exercise,29.99,18.00,YM001,Sports & Outdoors,FitnessPro,1.0,180x60x0.5 cm,"https://via.placeholder.com/300x300?text=Yoga+Mat",90,15,true
+Desk Lamp,LED desk lamp with adjustable brightness,39.99,25.00,DL001,Home & Garden,LightPro,0.8,30x20x40 cm,"https://via.placeholder.com/300x300?text=Desk+Lamp",60,10,true

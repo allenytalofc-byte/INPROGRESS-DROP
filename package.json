@@ -1,0 +1,29 @@
+{
+  "name": "dropshipping-monorepo",
+  "version": "1.0.0",
+  "description": "Complete dropshipping platform with store frontend, admin panel, backend API and workers",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "services/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:store\" \"npm run dev:admin\" \"npm run dev:api\"",
+    "dev:store": "cd apps/store-frontend && npm run dev",
+    "dev:admin": "cd apps/admin-panel && npm run dev",
+    "dev:api": "cd services/api && npm run start:dev",
+    "build": "npm run build:store && npm run build:admin && npm run build:api",
+    "build:store": "cd apps/store-frontend && npm run build",
+    "build:admin": "cd apps/admin-panel && npm run build",
+    "build:api": "cd services/api && npm run build",
+    "seed": "cd services/api && npm run seed",
+    "migrate": "cd services/api && npm run migration:run",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "install:all": "npm install && cd apps/store-frontend && npm install && cd ../admin-panel && npm install && cd ../../services/api && npm install && cd ../workers && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
